@@ -8,10 +8,6 @@ class UsersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Список пользователей"),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
       backgroundColor: Theme.of(context).colorScheme.background,
       body: StreamBuilder(
           stream: FirebaseFirestore.instance.collection('Users').snapshots(),
