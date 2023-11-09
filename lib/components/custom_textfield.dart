@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// custom text field which takes String hintText, bool obscureText and textController from parent component
+
 class CustomTextField extends StatelessWidget {
   final String hintText;
   final bool obscureText;

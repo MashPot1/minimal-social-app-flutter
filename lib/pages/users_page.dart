@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:minimalsocialapp/utils/error_message.dart';
 
+//page with all users of the app
 class UsersPage extends StatelessWidget {
   const UsersPage({super.key});
 

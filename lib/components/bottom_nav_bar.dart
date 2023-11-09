@@ -6,6 +6,8 @@ import 'package:minimalsocialapp/pages/users_page.dart';
 
 /// Flutter code sample for [BottomNavigationBar].
 
+// custom widget bottom nav bar
+
 class BottomNavBar extends StatefulWidget {
   BottomNavBar({super.key});
 

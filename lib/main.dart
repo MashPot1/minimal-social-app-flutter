@@ -8,6 +8,7 @@ import 'package:minimalsocialapp/theme/dark_mode.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+// initialize FireBase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }

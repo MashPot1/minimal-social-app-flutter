@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//custom button which takes text and function onTap from parent component
+
 class CustomButton extends StatelessWidget {
   final String text;
   final void Function()? onTap;

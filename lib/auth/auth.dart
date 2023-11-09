@@ -7,6 +7,7 @@ import '../components/bottom_nav_bar.dart';
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
 
+// if logged in show bottom nav bar (home page)
   @override
   Widget build(BuildContext context) {
     return Scaffold(

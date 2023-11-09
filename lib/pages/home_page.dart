@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
 
   final TextEditingController postController = TextEditingController();
 
+// postMessage invoke method addPost of class FirestoreDatabase and clear postController
   void postMessage() {
     if (postController.text.isNotEmpty) {
       fs.addPost(postController.text);
@@ -61,6 +62,7 @@ class HomePage extends StatelessWidget {
           StreamBuilder(
               stream: fs.getPostsStream(),
               builder: (context, snapshot) {
+                // if a connectionState == waiting show a progress indicator
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   Center(
                     child: CircularProgressIndicator(),
@@ -69,6 +71,7 @@ class HomePage extends StatelessWidget {
 
                 final posts = snapshot.data!.docs;
 
+                // if there are no posts show a message about it
                 if (snapshot.data == null || posts.isEmpty) {
                   return const Center(
                     child: Padding(
@@ -78,6 +81,7 @@ class HomePage extends StatelessWidget {
                   );
                 }
 
+                // list of posts
                 return Expanded(
                   child: ListView.builder(
                     itemCount: posts.length,

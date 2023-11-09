@@ -7,6 +7,7 @@ import 'package:minimalsocialapp/components/custom_button.dart';
 import 'package:minimalsocialapp/components/custom_textfield.dart';
 import 'package:minimalsocialapp/utils/error_message.dart';
 
+// login page with 4 text fields "username", "email", "password" and "confirm password" and 2 buttons "already registered?" and register
 class RegisterPage extends StatefulWidget {
   final void Function()? onTap;
 
