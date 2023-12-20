@@ -18,7 +18,7 @@ class FirestoreDatabase {
     });
   }
 
-// method getPostsStream receives posts from database by descending TimeStamp 
+// method getPostsStream receives posts from database by descending TimeStamp
   Stream<QuerySnapshot> getPostsStream() {
     final postsStream = FirebaseFirestore.instance
         .collection('Posts')

@@ -60,15 +60,16 @@ class HomePage extends StatelessWidget {
             ),
           ),
           StreamBuilder(
-              stream: fs.getPostsStream(),
-              builder: (context, snapshot) {
-                // if a connectionState == waiting show a progress indicator
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
+            stream: fs.getPostsStream(),
+            builder: (context, snapshot) {
+              // if a connectionState == waiting show a progress indicator
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
 
+              if (snapshot.hasData) {
                 final posts = snapshot.data!.docs;
 
                 // if there are no posts show a message about it
@@ -108,7 +109,13 @@ class HomePage extends StatelessWidget {
                     },
                   ),
                 );
-              })
+              } else {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+            },
+          )
         ],
       ),
     );
